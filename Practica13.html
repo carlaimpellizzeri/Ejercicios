@@ -1,0 +1,103 @@
+</!DOCTYPE html>
+<html>
+<head>
+		<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>TP-WEB-T3-P13</title>
+	<style type="text/css">
+    /* width es el ancho de la pagina
+    height es el alto de la pagina
+    font-weight: bold negrita
+    text-align: alineación
+    margin:margen de la caja que la contiene
+    hay que meter cajas dentro de cajas
+    display: flex se usa para cajas horizontales*/
+  body { 
+  background-color: #696969;
+  height: 100%;
+  width: 100%;
+  }
+  .cuadro1 {
+    background-color: #9400D3;
+    height: 100%;
+    width: 100%
+    }
+  .encabezado {
+    background-color: #F8F8FF;
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .centrado {
+    text-align: center;
+  }
+  .izquierda {
+    text-align: left;
+
+  }
+  .derecha {
+    text-align: right;
+
+  }
+  .cajas {
+    display: flex;
+    width: 100%
+    height: 100%;
+    margin-top: -1.6%;
+    margin-right: 10px;
+
+  }
+  .caja1 {
+    background: red;
+    font-weight: bold;
+    width: 671px;
+    height: 600px;
+
+  }
+  .caja2 {
+    background: green;
+    font-weight: bold;
+    width: 671px;
+    height: 600px;
+
+  }
+  .caja3 {
+    background: blue;
+    font-weight: bold;
+    width: 671px;
+    height: 600px;
+
+  }
+  .imagencaja3{
+      width: 250px;
+      height: 150px;
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
+    }
+  
+  .piedepagina{
+      background-color: white;
+      width:50%;
+      height: 200px;
+      padding-top: 180px;
+    }
+
+	</style>
+</head>
+<body>
+
+  <div class="cuadro1">
+    <div class="encabezado">
+      <p class="centrado">Carla Impellizzeri<br>Curso TP.Web</p>
+      <p class="izquierda">ESTOY A LA IZQUIERDA</p>
+    </div>
+    <div class="cajas" class="izquierda">
+      <div><p class="caja1">CAJA 1</p></div>
+      <div><p class="caja2">CAJA 2</p></div>
+      <div ><p class="caja3">CAJA 3</p><img src="caja3.png" class="imagencaja3"></div>
+    </div>
+    <div class="piedepagina"><p class="derecha" class="centrado">PIE DE PAGINA<p></div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>TP-WEB-T2-P9</title>
+</head>
+<body>
+
+	<!--action es el lugar a donde va a ir a parar la información -->
+	<!--Método GET es para información visible, POST es para información que necesita ocultarse, como una contraseña -->
+	<!--size, especifica el tamaño del campo en caracteres -->
+	<!--maxlength, es para limitar en numero de campos a ingresar -->
+	<!--required, hacer un campo obligatorio -->
+	<!--placeholder, texto que aparece en el campo donde hay que completar -->
+	<!--value, es un valor por defecto y además envia correctamente el dato al servidor-->
+	<!--fieldset, incluye la información dentro de un cuadro, va acompañado del legend que es el título del cuadro-->
+
+	<form action="#" method="GET">
+		<fieldset>
+		<legend>Datos del formulario</legend>
+		<label for="nombre">Escribe tu nombre: </label><br><br>
+		<input type="text" name="nombre" id="nombre" size="15" maxlength="4" required placeholder="Escribe tu nombre" value="Escribe tu nombre"><br><br>
+
+
+
+		<label for="password">Escribe tu contraseña: </label><br><br>
+		<input type="password" name="contraseña" id="contraseña"><br><br>
+
+		<label for="email">Escribe tu email: </label><br><br>
+		<input type="email" name="email" id="email"><br><br>
+
+	<!--type="radio", es para colocar circulos de opción -->
+	<!--checked, es la opción por defecto y solo puede haber un checked por grupo de radio -->
+
+		<input type="radio" name="genero" id="hombre" value="hombre">
+		<label for="hombre">Hombre</label>
+		<input type="radio" name="genero" id="mujer"value="mujer">
+		<label for="mujer">Mujer</label>
+		<input type="radio" name="genero" id="otro" checked value="otro">
+		<label for="otro">Otro</label><br><br>
+
+
+	<!--type="radio", es para colocar circulos de opción, el name es lo que lo agrupa -->
+	<!--checked, es la opción por defecto y solo puede haber un checked por grupo de radio -->
+
+		<input type="checkbox" name="idiomas" id="español" checked value="español">
+		<label for="español">Español</label>	
+		<input type="checkbox" name="idiomas" id="ingles" value="ingles">
+		<label for="ingles">Inglés</label>
+		<input type="checkbox" name="idiomas" id="frances" value="frances">
+		<label for="frances">Frances</label><br><br>
+
+	<!--type="file", boton para adjuntar archivos -->
+
+		<input type="file" name="archivo"><br><br>
+
+
+	<!--select, sería para crear la lista -->
+	<!--option, sería para definir las opciones de la lista -->
+	<!--multiple, se utiliza para poder elejir varias opciones -->
+		<label for="lenguajes">Lenguaje de programación:</label>	
+		<select name="lenguajes" id="lenguajes" multiple>
+			<option value="java">Java</option>
+			<option value="csharp">C#</option>
+			<option value="python">Python</option>
+		</select><br><br>
+
+	<!--datalist, sería para crear otra lista-->
+	<!--option, sería para definir las opciones de la lista -->
+	<!--value es importante porque es lo que marca el valor que se va a enviar al servidor -->
+		
+		<label for="lenguaje2">Lenguajes 2</label>
+		<input list="lenguaje2" name="lenguaje2">
+		<datalist id="lenguaje2">
+			<option value="java"></option>
+			<option value="csharp"></option>
+			<option value="python"></option>
+		</datalist><br><br>
+		
+
+
+		<input type="reset"><br><br>
+		<input type="submit" value="Enviar todos los datos"><br><br>
+	</fieldset>
+	</form>
+</body>
+</html>
