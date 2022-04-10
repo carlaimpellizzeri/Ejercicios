@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Práctica 19</title>
+	<style type="text/css">
+	@media sreen and (max-width: 300px){
+		{background-color: lightblue}
+	}
+
+	@keyframes filtros {
+			0%{filter: brightness (300%);}
+			40%{filter: contrast(300%);}
+			60%{filter: saturate(300%);}
+			80%{filter: sepia(300%);}
+			100%{filter: grayscale(300%);}
+			
+		}
+		.imagen {
+			animation-name: filtros;
+			animation-duration: 10s;
+			animation-direction: normal;
+			animation-iteration-count: infinite;
+			position: relative;
+	}
+	</style>
+</head>
+<body>
+<img class="imagen"src="castillo.jpg">
+</body>
+</html>
