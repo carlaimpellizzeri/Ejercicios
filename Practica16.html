@@ -4,38 +4,27 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Ejercicio 16</title>
-	<style type="text/css">	
+	<style type="text/css">
 
-div.titulo2{
-	border: 1px solid black;
-	padding: 15px;
+.rojo::first-line {
+	color: red;
 }
-p.enrojo{
-	color:red;
-	font-size-adjust: 
-} 
-p.enrojo::first-letter {
-		font-size: 30px;
-	}
 
-p.parrafo{
-	padding-bottom: 50px;
-	overflow: visible;
-	} 
-
+.rojo::first-letter {
+	font-size: 30px;
 }
+
 	</style>
-
 </head>
 <body>
 	<div class="titulo1">
 	<h1><img src="check.png">Lista de compras</h1>
-	
 	</div>
 	<div class="titulo2">
-	<p class="parrafo">Todo esto es un parrafo</p>
-	<p class="enrojo">Esta es mi lista de compras</p>
-	<p>para compras cosas que necesito sino me muero de hambre</p>
+	<fieldset>
+	<legend>Todo esto es un parrafo</legend>
+	<p class="rojo">Esta es mi lista de compras<br>para compras cosas que necesito sino me muero de hambre</p>
+	</fieldset>
 	</div>
 	<div>
 		<ul>
