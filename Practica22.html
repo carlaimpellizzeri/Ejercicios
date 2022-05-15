@@ -1,65 +1,70 @@
-<!DOCTYPE html>
+	<!DOCTYPE html>
 <html>
 <head>
 	<title>Practica 22</title>
 	<style type="text/css">
 
 
-	/*.cuadro1 {
-		background-image: url(nombreschicas.png);
-		width: 300px;
-		height: 1500px;
-	}*/
+body {
+  background: #000;
+}
 
-	.burbuja{
-		width: 300px;
-		height: 300px;
-		float: left;
-	}
-	.bombon{
-		width: 300px;
-		height: 300px;
-		float: left;
-	}
-	.bellota{
-		width: 300px;
-		height: 300px;
-		float: left;
-	}
+.container {
+  width: 100%;
+  max-width: 1060px;
+  background: #000;
+  overflow: hidden;
+  margin: 25px auto;
+  position: relative;
+  height: 600px;
 
-	.bellota:hover {
-		width: 210px;
-		height: 370px;
-		
-	}
-	.bombon:hover {
-		width: 210px;
-		height: 370px;
-		
-	}
-	.burbuja:hover {
-		width: 210px;
-		height: 370px;	
-	}
-	/*.cuadro1:hover {
-		width: 400px;
-		height: 1600px;
-	}*/
+}
+.container:hover .background {
+  -webkit-transform: scale(0.6) translate(-50%, -50%);
+      -ms-transform: scale(0.6) translate(-50%, -50%);
+          transform: scale(0.6) translate(-50%, -50%);
+}
+.container:hover .front {
+  -webkit-transform: scale(1.4);
+      -ms-transform: scale(1.4);
+          transform: scale(1.4);
+}
+
+.background {
+  top:90%;
+  left: 90%;
+  width: 1411px;
+  height: 717px;
+  position: absolute;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transform-origin: top left;
+      -ms-transform-origin: top left;
+          transform-origin: top left;
+  -webkit-transition: -webkit-transform 1s;
+          transition: transform 1s;
+}
+
+.front {
+  top: 10%;
+  left: 28%;
+  z-index: 1;
+  position: absolute;
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: -webkit-transform 1s;
+          transition: transform 1s;
+}
 
 
 	</style>
 </head>
 <body>
-		<div class="cuadro1">
-		<div>
-		<img src="burbuja.jpg" class="burbuja">
-		</div>
-		<div>
-		<img src="bellota.jpg" class="bellota">
-		</div>
-		<div>
-		<img src="bombon.jpg" class="bombon">
-		</div>
-		</div>
+<div class="container">
+  <div class="front"><img src="batman.png" alt="batman" /></div>
+  <div class="background"><img src="fondobatman.jpg" alt="" /></div>
+</div>
 </body>
 </html>
