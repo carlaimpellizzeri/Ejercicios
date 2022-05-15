@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title></title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+
+<body>
+    <p id="parrafo"></p>
+
+    <script>
+        // Primera parte
+        let numero1 = 0;
+        let numero2 = 0;
+        do {
+            numero1 = parseInt(prompt("Dime el numero 1"));
+            numero2 = parseInt(prompt("Dime el numero 2"));
+        } while (numero1>numero2);
+
+        // Segunda parte
+        let contadorPares = 0;
+        for (let i=numero1 ; i<numero2; i++) {
+            if(i % 2 == 0) {
+                contadorPares++;
+            }
+        }
+        alert ("Hay " + contadorPares + " pares.");
+        // do {
+        // numero = parseInt (prompt("Dime un numero"));    
+        // } while (numero < 1 || numero >10);
+        // while es condicion de verdadero. Si la ocndicion es verdadera vuelve a solicitar el dato. Se repite infinitamente.
+        // for es finito. se puede usar una serie determinada de veces. 1ero variable, 2do condicion, 3ro incrementador. Si quiero que empiece desde el número que coloco a la variable le agrego =numero
+        // while (numero < 1 || numero >10) {
+        // numero = parseInt(prompt("Dime un numero"));
+        // }
+
+    </script>
+</body>
+
+</html>

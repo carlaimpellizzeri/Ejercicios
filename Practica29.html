@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Practica 29</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+
+<body>
+    <p id="parrafo"></p>
+
+    <script>
+        let numpersonas = 0;
+        do {
+            numpersonas = parseInt(prompt("Dime un numero de personas"));
+            if (numpersonas<0 || numpersonas>5) {
+                alert ("El numero de personas tiene que estar entre 1 y 5");
+            }
+        } while (numpersonas<0 || numpersonas>5);
+
+        let nombreLargo = " ";
+        let nMujeres= 0;
+        let nHombres= 0;
+        let mediaEdad= 0;
+            // length trae la cantidad de letras
+        for (let i=0; i<numpersonas; i++) {
+            let nombre = prompt("Dime el nombre " + i++);
+            let genero = prompt("Dime el genero");
+            let edad = parseInt(prompt("Dime la edad"));
+            if (nombre.length>nombreLargo.length) {
+                nombreLargo = nombre;
+            }
+            if (genero == "mujer") {
+                nMujeres++;
+            } else {
+                nHombres++;
+            }
+            mediaEdad += edad;
+        }
+        document.getElementById("parrafo").innerHTML = "El nombre mas largo es " + nombreLargo + "<br>" + "Se ha puesto" + nMujeres + " mujeres" + nHombres + " hombres" + "<br>" + "y la media de la edad es de: " + (mediaEdad/numpersonas);
+
+
+
+    </script>
+</body>
+
+</html>

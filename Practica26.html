@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Practica 26</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+
+<body>
+
+    <script>
+        let nota = parseInt(prompt("Inserta tu nota:"));
+        if (nota > 10) {
+            alert("Error: Nota incorrecta");
+        } else if (nota >= 0 && nota <= 4) {
+            alert("SUSPENSO");
+        } else if (nota == 5) {
+            alert("SUFICIENTE");
+        } else if (nota >= 6 && nota <= 7) {
+            alert("BIEN");
+        } else if (nota == 8) {
+            alert("NOTABLE");
+        } else if (nota >= 9 && nota <= 10) {
+            alert("SOBRESALIENTE");
+        }
+
+    </script>
+</body>
+
+</html>
