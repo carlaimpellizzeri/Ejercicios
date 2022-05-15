@@ -3,26 +3,77 @@
 <head>
 	<title>Practica 21</title>
 	<style type="text/css">
-
-	@keyframes cambiaFondo {
-		0%{background-image: url(paisaje1.jpg);}
-		50%{background-image: url(paisaje2.jpg);}
-		100%{background-image: url(paisaje3.jpg);}
+	@media sreen and (max-width: 300px){
+		{background-color: white}
 	}
 
-	.animation1 {
-		height: 300px;
-		width: 600px;
-		animation-name: cambiaFondo;
-		animation-duration: 20s;
+		}
+		.sol {
+			width: 200px;
+			height: 200px;
+			float: left;
 
+		}
+
+			@keyframes titilar {
+			0% {opacity: -0.50};
+			50% {opacity: 0.50};
+			100% {opacity: -0.50};
 	}
+
+		.sol {
+			animation-name: titilar;
+			animation-duration: 2s;
+			animation-direction: normal;
+			animation-iteration-count: infinite;
+			position: relative;
+	}
+			.mariposa {
+			width: 300px;
+			height: 300px;
+			margin-left: 200px;
+			float: center;
+		}
+
+		@keyframes filtros {
+			0%{filter: saturate(300%);}
+			50%{filter: sepia(300%);}
+			100%{filter: grayscale(300%);}
+			
+		}
+		.mariposa {
+			animation-name: filtros;
+			animation-duration: 10s;
+			animation-direction: normal;
+			animation-iteration-count: infinite;
+			position: relative;
+	}
+
+		@keyframes vuela {
+		0%{left: 0;}
+		50%{left: 100px}
+		75%{left: 150px;}
+		100%{left: 2000px}
+	}
+		.mariposa2 {	
+			width: 300px;
+			height: 300px;
+			margin-left: 200px;
+			float: center;
+			animation-name: vuela;
+			animation-fill-mode: forwards;
+			animation-duration: 3s;
+			animation-timing-function: ease-out;
+			position: relative;
+		}
+
+	
 	</style>
 </head>
 <body>
-	<div class="animation1">
-		
-	</div>
+<img class="sol"src="sol.png">
+<img class="mariposa"src="mariposa.png">
+<img class="mariposa2"src="mariposa2.png">
 
 </body>
 </html>
