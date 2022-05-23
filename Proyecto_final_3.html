@@ -23,51 +23,77 @@
                 <p class="card-text" style="font-size:medium">Dirección: Avenida Andalucia 48, CP 29014, Málaga</p>
             </div>
         </div>
-    </div>   
+    </div>
 
 
     <div class="container">
-    <br>
-    <br>
-    <p class="text-white">Si deseas que nos pongamos en contacto contigo, completa la siguiente informacion:</p>
-    <label for="Nombre" style="color:white">Nombre y apellido:</label><br><br>
-    <input type="text" id="nombre" size="40" placeholder="Inserte su nombre y apellido" style="background-color:antiquewhite">
-    <br>
-    <br>
-    <label for="Nombre" style="color:white">Movil:</label><br><br>
-    <input type="text" id="nombre" size="40" placeholder="Inserte su movil" style="background-color:antiquewhite">
-    <br>
-    <br>
-    <input type="submit" value="Enviar">
-    </div> 
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
+        <br>
+        <br>
+        <p class="text-white">Si deseas que nos pongamos en contacto contigo, completa la siguiente informacion:</p>
+    </div>
+    <div class="container-fluid">
+        <form>
+            <label for="nombre">Nombre y apellido:</label><br>
+            <input type="text" name="nombre" id="nombre" size="40" placeholder="Inserte su nombre y apellido">
+            <br>
+            <label for="movil">Móvil:</label><br>
+            <input type="text" name="movil" id="movil" size="40" placeholder="Inserte su movil">
+            <br>
+            <br>
+            <input type="button" value="Enviar" onclick="compruebaCampos()">
+            <br>
+
+            <div class="alert alert-danger mt-3 d-none" id="alertaError">
+                <p>
+                    <strong> Faltan datos! </strong>
+                </p>
+            </div>
+
+            <div class="alert alert-success mt-3 d-none" id="alertaExito">
+                <p>
+                    <strong>Enviado!</strong>
+                </p>
+            </div>
+        </form>
+    </div>
+
+
+    <script type="text/javascript">
+
+        function compruebaCampos() {
+            let campoNombre = document.getElementById("nombre").value;
+            let campoMovil = document.getElementById("movil").value;
+            let alertaExito = document.getElementById("alertaExito");
+            let alertaError = document.getElementById("alertaError");
+
+            if (campoNombre == "" || campoMovil == "") {
+                alertaError.classList.remove("d-none");
+                alertaExito.classList.add("d-none");
+            } else {
+                alertaError.classList.add("d-none");
+                alertaExito.classList.remove("d-none");
+            }
+        }
+    </script>
 
     <footer>
         <hr style="background-color: white">
-    <div >
-        <div style="color: white;">
-            <h6>2022 CLICKHOME, Todos los derechos reservados</h6>
-            <h6>Terminos y condiciones Politica de privacidad</h6>
+        <div>
+            <div style="color: white;">
+                <h6>2022 CLICKHOME, Todos los derechos reservados</h6>
+                <h6>Terminos y condiciones Politica de privacidad</h6>
+            </div>
+            <div style="float:right">
+                <img src="facebook.png" class="img-thumbnail" width="50" height="20">
+                <img src="instagram.png" class="img-thumbnail" width="50" height="20">
+                <img src="twitter.png" class="img-thumbnail" width="50" height="20">
+                <img src="whatsap.png" class="img-thumbnail" width="50" height="20">
+                <br>
+                <br>
+            </div>
         </div>
-        <div style="float:right">
-            <img src="facebook.png" class="img-thumbnail" width="50" height="20">
-            <img src="instagram.png" class="img-thumbnail" width="50" height="20">
-            <img src="twitter.png" class="img-thumbnail" width="50" height="20">
-            <img src="whatsap.png" class="img-thumbnail" width="50" height="20">
-            <br>
-            <br>
-        </div>
-    </div>
     </footer>
-   
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
