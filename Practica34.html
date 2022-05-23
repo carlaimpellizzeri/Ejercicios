@@ -4,37 +4,57 @@
 <head>
     <meta charset='utf-8'>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <title>TP-WEB-T1-P31</title>
-
+    <title>Practica 34</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    
 </head>
 
-<body>  
-    <label for="usuario">Usuario:</label><br>
-    <input type="text" id="name" placeholder="Inserte su usuario">
-    <br>
-    <label for="Contraseña">Contraseña:</label><br>
-    <input type="password" id="Contraseña" placeholder="Inserta  tu contraseña">
-    <br>
-    <input type="submit" value="Iniciar sesion">
-    <br>
-    <div>
-        <div class="alert alert-success alert-dismissible">
-        <button type="button" class="btn-close data-bs-dismiss" data-bs-dismiss="alert"></button>
-        "Sesion iniciada"     
-        </div>
-        <div class="alert alert-warning alert-dismissible">
-        <button type="button" class="btn-close data-bs-dismiss" data-bs-dismiss="alert"></button>
-        "Los campos deben estar rellenos"     
-        </div>
-        <p id="iniciarSesion"></p>
-    </div>
-    <script type="text/javascript">
-        let iniciarSesion = document.getElementById("iniciarSesion")
+<body> 
+    <div class="container-fluid">
+        <form>
+            <label for="usuario">Usuario:</label><br>
+            <input type="text" name="usuario" id="usuario" placeholder="Inserte su usuario">
+            <br>
+            <label for="Contrasena">Contrasena:</label><br>
+            <input type="password" name="contrasena" id="Contrasena" placeholder="Inserta  tu contrasena">
+            <br>
+            <input type="button" value="Iniciar sesion" onclick="compruebaCampos()">
+            <br>
 
-        alert 
+            <div class="alert alert-danger mt-3 d-none" id="alertaError">
+                <p>
+                <strong>Error!</strong> Los campos deben estar rellenos</p>  
+            </div>
+
+            <div class="alert alert-success mt-3 d-none" id="alertaExito">
+                <p>
+                <strong>Exito</strong> Bienvenido usuario</p> 
+            </div>
+        </form> 
+    </div>
+    
+
+    <script type="text/javascript">
+
+        function compruebaCampos () {
+            let campoUsuario = document.getElementById("usuario").value;
+            let campoContrasena = document.getElementById("Contrasena").value;
+            let alertaExito = document.getElementById("alertaExito");
+            let alertaError = document.getElementById("alertaError");
+
+            if (campoUsuario == "" || campoContrasena == "") {
+                alertaError.classList.remove("d-none");
+                alertaExito.classList.add("d-none");
+            } else {
+                alertaError.classList.add("d-none");
+                alertaExito.classList.remove("d-none");
+            }
+        }
     </script>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
